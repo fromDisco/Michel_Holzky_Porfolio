@@ -1,0 +1,8 @@
+in app/config/config.php:
+Konstanten/Datenbankzugang anpassen
+
+in public/.htaccess
+RewriteBase anpassen
+
+ich hoffe das war alles.
+Mit freundlich Grüßen

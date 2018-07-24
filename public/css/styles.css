@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    /* min-width: 1200px; */
+    /* height: 100%; */
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-size: 100%;
+    color: #333;
+}
+
+h1, h2, h3, nav, .register-login {
+    font-family: Ubuntu, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* MAIN generell ++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.wrapper {
+    position: relative;
+    z-index: 10;
+    width: 60%;
+    max-width: 1200px;
+    /* min-width: 800px; */
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5em 0;
+    /* background-color: #333; */
+    background-color: rgba(238,238,238, 0.95);
+}
+
+.wrapper.index {
+    background-color: #333;
+    color: rgba(238,238,238, 0.95);
+}
+
+.inner-wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.back-button {
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #333;
+    color: rgb(162, 199, 29);
+    padding: .3em .5em;
+    margin-bottom: 1em;
+}
+
+.back-button:hover, .back-button:active {
+    background-color: #222;
+    transform: scale(.99);
+}
+
+.content h3 {
+    padding-top: .35em;
+    letter-spacing: .04em;
+}
+
+/* ende main ---------------------------------------------------------*/
+
+
+/* ANFANG HEAD ++++++++++++++++++++++++++++++++++++++++++++++++ */
+.head {
+    position: fixed;
+    left: 2.5%;
+    top: 2rem;
+    z-index: 11;
+    color: #fff;
+}
+
+.head h1 {
+    font-size: 1.6em;
+    margin-bottom: .25em;
+}
+
+.head h2 {
+    font-size: 1.1em;
+}
+
+.head h2 a {
+    color: #fff;
+}
+
+.head sup {
+    font-size: .6em;
+    /* font-weight: 400 */
+}
+/* ende head --------------------------------------------------- */
+
+
+/* ANFANG NAV ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+nav {
+    position: fixed;
+    top: 50%;
+    left: 2.5%;
+    z-index: 12;
+    transform: translateY(-50%);
+}
+
+.nav-ul a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.15em;
+    line-height: 2em;
+    letter-spacing: .03em;
+    color: #fff;
+}
+
+.nav-ul a:hover:after {
+    content: ' >';
+}
+
+/*  login-buttons */
+.register-login {
+    position: fixed;
+    right: 2.5%;
+    top: 2rem;
+    z-index: 12;
+}
+
+.register-login li {
+    float: left;
+    padding: 0 .5em;
+    color: #fff;
+}
+
+
+.register-login a {
+    display: block;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: .1em;
+}
+    .register-login a:hover {
+        border-bottom: 2px solid #fff;
+    }
+
+.active a:before {
+    content: '_ ';
+    position: absolute;
+    left: -15px;
+    margin-top: -0.05em;
+    font-size: 1.1em;
+    font-weight: 900;
+    /* color: #333; */
+}
+/* ende nav -------------------------------------------------------- */
+
+
+/* ANFANG Form +++++++++++++++++++++++++++++++++++++++++++++++++ */
+.invalid {
+    box-shadow: 0 0 3px #CC0000;
+}
+
+legend {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.17em;
+    line-height: 1.5em;
+}
+
+/* .edit-wrap label { */
+label {
+    font-size: .75em;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+
+fieldset {
+    border: none;
+}
+
+input, textarea {
+    display: block;
+    border: none;
+    width: 98%;
+    background: none;
+    /* padding: 1em; */
+    line-height: 1.5em;
+    letter-spacing: .04em;
+    font-size: 100%;
+    /* color: #333; */
+}
+
+.formfield {
+    margin-bottom: .25em;
+    padding: 1%;
+    font-family: 'Opens Sans', sans-serif;
+    letter-spacing: .03em;
+    background: #333;
+    color: #fff;
+}
+
+
+.formfield:hover, 
+.formfield:focus {
+    background-color: #555; 
+}
+
+.formfield-wrap {
+    margin-top: .5em;
+}
+
+.submit {
+    display: block;
+    width: 100%;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    color: rgb(162, 199, 29);
+}
+
+/* Button: Beitrag hinzufügen */
+.content.button {
+    /* display: table; */
+    margin: 5em 0 1em;
+    padding: .5em 1em;
+    background-color: #333;
+    text-align: center;
+}
+
+.content.button:hover {
+    transform: scale(.99);
+}
+
+.content.button:active {
+    background-color: #222;
+}
+
+.button a {
+    display: block;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    color: rgb(162, 199, 29);
+}
+
+/* Seite mit einzelnem Beitrag */
+.content.delete.button {
+    margin-top: 1em;
+}
+
+.danger {
+    display: block;
+    width: 100%;
+    background: none;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    color: rgb(224, 40, 49);
+}
+
+.href-button a {
+    color: rgb(66, 186, 241);
+}
+
+/* ende Seite mit einzelnem Beitrag */
+/* ende Form --------------------------------------------------- */
+
+
+/* ANFANG INDEX ++++++++++++++++++++++++++++++++++++++++++++++++ */
+.skills {
+    display: block;
+    margin-left: 1.5em;
+}
+
+.function {
+    margin: 2em 0; 
+}
+
+.function-name {
+    color: rgb(162, 199, 29);
+}
+
+.text-content {
+    color: rgb(235, 196, 113);
+    font-style: normal;
+}
+/* ende index --------------------------------------------------- */
+
+
+/* ANFANG PORTFOLIO ++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* bilder passen sich der weite des Elternelements an */
+.auto-width {
+    width: 100%;
+}
+
+/* macht den gesamten Beitrag klickbar */
+.expand-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* enthält den gesamten Beitrag */
+.content {
+    position: relative;
+    margin-bottom: 3em;
+}
+
+/* umschließt das Bild */
+.crop-img {
+    height: 10em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+    /* animation: expand 1s  */
+}
+
+/* umschließt den Text, der das Bild beschreibt */
+.img-text {
+    position: absolute;
+    bottom: 0em;
+    color: #fff;
+}
+
+.portfolio.h3, .portfolio.subhead {
+    display: table;
+    background-color: #333;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.subhead {
+    padding-bottom: .35em;
+}
+/* Beschreibungstext */
+.description {
+    height: 0;
+    overflow: hidden;
+}
+/* ende portfolio --------------------------------------------------- */
+
+
+/* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.space-left {
+    margin-left: 10%;
+}
+/* ende portfolio --------------------------------------------------- */
+
+
+/* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.user-data {
+    font-size: .75em;
+}
+
+.blog-author {
+    text-transform: uppercase;
+    letter-spacing: .09em;
+}
+
+.post-created {
+    float: right;
+}
+
+.blog-article {
+    margin-top: .2em;
+}
+
+.show-more a {
+    color: rgb(66, 186, 241);
+}
+
+.show-more a:hover {
+    color: rgb(162, 199, 29);
+}
+.show-more a:hover:after {
+    content: " >";
+}
+
+/* ende blog --------------------------------------------------------------- */
+
+
+/* IMPRESSUM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.impressum h4 {
+    margin-top: 2em;
+}
+
+.impressum h3 {
+    margin-top: 2em; 
+}
+/* ende impressum ---------------------------------------------------------- */
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Media-Queries +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (max-width: 1400px) {
+    .register-login li {
+        float: none;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .register-login {
+        right: auto;
+        top: auto;
+        left: 2.5%;
+        bottom: 2em;
+    }
+
+    .register-login li {
+        text-align: left;
+    }
+
+    .wrapper {
+        float: right;
+        width: 75%;
+        /* margin: 0 0 0 auto; */
+        /* min-width: auto; */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+}

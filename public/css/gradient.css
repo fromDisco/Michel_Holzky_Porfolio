@@ -1,0 +1,58 @@
+.godwrapper {
+    position: relative;
+    z-index: 0;
+    /* height: 100vh; */
+}
+
+.gradient {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#grad-one {
+    background: -moz-linear-gradient(225deg, rgb(162, 199, 29) 0%, rgba(162, 199, 29, 0) 53%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(225deg, rgba(162, 199, 29, 1) 0%, rgba(162, 199, 29, 0) 53%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(225deg, rgb(162, 199, 29) 0%, rgba(162, 199, 29, 0) 53%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bed46d', endColorstr='#00bed46d', GradientType=1); */
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+#grad-two {
+    background: -moz-linear-gradient(135deg, rgba(66, 186, 241, 1) 0%, rgba(66, 186, 241, 0) 53%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(135deg, rgba(66, 186, 241, 1) 0%, rgba(66, 186, 241, 0) 53%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(315deg, rgb(66, 186, 241) 0%, rgba(66, 186, 241, 0) 53%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bed46d', endColorstr='#00bed46d', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+#grad-three {
+    background: -moz-linear-gradient(45deg, rgb(224, 40, 49) 0%, rgba(224, 40, 49, 0) 53%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgb(224, 40, 49) 0%, rgba(224, 40, 49, 0) 53%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgb(224, 40, 49) 0%, rgba(224, 40, 49, 0) 53%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bed46d', endColorstr='#00bed46d', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+#grad-four {
+    background: -moz-linear-gradient(-45deg, rgb(245, 184, 93) 0%, rgba(245, 184, 93, 0) 53%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgb(245, 184, 93) 0%, rgba(245, 184, 93, 0) 53%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgb(245, 184, 93) 0%, rgba(245, 184, 93, 0) 53%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bed46d', endColorstr='#00bed46d', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
