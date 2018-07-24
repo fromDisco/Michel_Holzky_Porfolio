@@ -9,7 +9,7 @@ html {
 
 body {
     min-height: 100%;
-    /* min-width: 1200px; */
+    min-width: 400px;
     /* height: 100%; */
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5em;
@@ -18,7 +18,11 @@ body {
     color: #333;
 }
 
-h1, h2, h3, nav, .register-login {
+h1,
+h2,
+h3,
+nav,
+.register-login {
     font-family: Ubuntu, sans-serif;
 }
 
@@ -36,8 +40,8 @@ ul li {
     clear: both;
 }
 
-
 /* MAIN generell ++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
 .wrapper {
     position: relative;
     z-index: 10;
@@ -49,12 +53,12 @@ ul li {
     margin: 0 auto;
     padding: 5em 0;
     /* background-color: #333; */
-    background-color: rgba(238,238,238, 0.95);
+    background-color: rgba(238, 238, 238, 0.95);
 }
 
 .wrapper.index {
     background-color: #333;
-    color: rgba(238,238,238, 0.95);
+    color: rgba(238, 238, 238, 0.95);
 }
 
 .inner-wrap {
@@ -71,7 +75,8 @@ ul li {
     margin-bottom: 1em;
 }
 
-.back-button:hover, .back-button:active {
+.back-button:hover,
+.back-button:active {
     background-color: #222;
     transform: scale(.99);
 }
@@ -83,8 +88,8 @@ ul li {
 
 /* ende main ---------------------------------------------------------*/
 
-
 /* ANFANG HEAD ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .head {
     position: fixed;
     left: 2.5%;
@@ -110,10 +115,16 @@ ul li {
     font-size: .6em;
     /* font-weight: 400 */
 }
+
 /* ende head --------------------------------------------------- */
 
-
 /* ANFANG NAV ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.nav-container {
+    position: relative;
+}
+
+
 nav {
     position: fixed;
     top: 50%;
@@ -135,8 +146,10 @@ nav {
 .nav-ul a:hover:after {
     content: ' >';
 }
+/* ende Hamburger-Menu ------------ */
 
 /*  login-buttons */
+
 .register-login {
     position: fixed;
     right: 2.5%;
@@ -150,16 +163,16 @@ nav {
     color: #fff;
 }
 
-
 .register-login a {
     display: block;
     font-weight: 500;
     color: #fff;
     padding-bottom: .1em;
 }
-    .register-login a:hover {
-        border-bottom: 2px solid #fff;
-    }
+
+.register-login a:hover {
+    border-bottom: 2px solid #fff;
+}
 
 .active a:before {
     content: '_ ';
@@ -170,10 +183,11 @@ nav {
     font-weight: 900;
     /* color: #333; */
 }
+
 /* ende nav -------------------------------------------------------- */
 
-
 /* ANFANG Form +++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .invalid {
     box-shadow: 0 0 3px #CC0000;
 }
@@ -185,18 +199,19 @@ legend {
 }
 
 /* .edit-wrap label { */
+
 label {
     font-size: .75em;
     text-transform: uppercase;
     letter-spacing: .09em;
 }
 
-
 fieldset {
     border: none;
 }
 
-input, textarea {
+input,
+textarea {
     display: block;
     border: none;
     width: 98%;
@@ -217,10 +232,9 @@ input, textarea {
     color: #fff;
 }
 
-
-.formfield:hover, 
+.formfield:hover,
 .formfield:focus {
-    background-color: #555; 
+    background-color: #555;
 }
 
 .formfield-wrap {
@@ -236,6 +250,7 @@ input, textarea {
 }
 
 /* Button: Beitrag hinzufügen */
+
 .content.button {
     /* display: table; */
     margin: 5em 0 1em;
@@ -260,6 +275,7 @@ input, textarea {
 }
 
 /* Seite mit einzelnem Beitrag */
+
 .content.delete.button {
     margin-top: 1em;
 }
@@ -278,17 +294,18 @@ input, textarea {
 }
 
 /* ende Seite mit einzelnem Beitrag */
+
 /* ende Form --------------------------------------------------- */
 
-
 /* ANFANG INDEX ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .skills {
     display: block;
     margin-left: 1.5em;
 }
 
 .function {
-    margin: 2em 0; 
+    margin: 2em 0;
 }
 
 .function-name {
@@ -299,16 +316,19 @@ input, textarea {
     color: rgb(235, 196, 113);
     font-style: normal;
 }
+
 /* ende index --------------------------------------------------- */
 
-
 /* ANFANG PORTFOLIO ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /* bilder passen sich der weite des Elternelements an */
+
 .auto-width {
     width: 100%;
 }
 
 /* macht den gesamten Beitrag klickbar */
+
 .expand-link {
     position: absolute;
     top: 0;
@@ -317,14 +337,15 @@ input, textarea {
     left: 0;
 }
 
-
 /* enthält den gesamten Beitrag */
+
 .content {
     position: relative;
     margin-bottom: 3em;
 }
 
 /* umschließt das Bild */
+
 .crop-img {
     height: 10em;
     position: relative;
@@ -334,13 +355,15 @@ input, textarea {
 }
 
 /* umschließt den Text, der das Bild beschreibt */
+
 .img-text {
     position: absolute;
     bottom: 0em;
     color: #fff;
 }
 
-.portfolio.h3, .portfolio.subhead {
+.portfolio.h3,
+.portfolio.subhead {
     display: table;
     background-color: #333;
     padding-left: .5em;
@@ -350,22 +373,26 @@ input, textarea {
 .subhead {
     padding-bottom: .35em;
 }
+
 /* Beschreibungstext */
+
 .description {
     height: 0;
     overflow: hidden;
 }
+
 /* ende portfolio --------------------------------------------------- */
 
-
 /* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .space-left {
     margin-left: 10%;
 }
+
 /* ende portfolio --------------------------------------------------- */
 
-
 /* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .user-data {
     font-size: .75em;
 }
@@ -390,22 +417,25 @@ input, textarea {
 .show-more a:hover {
     color: rgb(162, 199, 29);
 }
+
 .show-more a:hover:after {
     content: " >";
 }
 
 /* ende blog --------------------------------------------------------------- */
 
-
 /* IMPRESSUM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .impressum h4 {
     margin-top: 2em;
 }
 
 .impressum h3 {
-    margin-top: 2em; 
+    margin-top: 2em;
 }
+
 /* ende impressum ---------------------------------------------------------- */
+
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -421,6 +451,7 @@ input, textarea {
     }
 }
 
+/* Anfang max-width: 1200px ++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 1200px) {
     .register-login {
         right: auto;
@@ -428,19 +459,133 @@ input, textarea {
         left: 2.5%;
         bottom: 2em;
     }
-
     .register-login li {
         text-align: left;
     }
-
     .wrapper {
         float: right;
         width: 75%;
         /* margin: 0 0 0 auto; */
         /* min-width: auto; */
     }
-}
+} 
+/* ende max-width: 1200px __________________________________________________ */
 
-@media screen and (max-width: 700px) {
+
+/* Anfang max-width: 900px +++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen and (max-width: 900px) {
+    /* Hamburger-Menu ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    .hamburger {
+        position: fixed;
+        left: 2.5%;
+        top: 2rem;
+        z-index: 15;
+    }
+
+    .hamburger a {
+        position: relative;
+        /* display: block; */
+    }
+
+    #open {
+        padding: .625em .875em;
+        
+    }
+
+    #open:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: .5em;
+        width: 1.75em;
+        height: .25em;
+        background: #333;
+        border-radius: .1em;
+        box-shadow: 0 -.5em 0 0 #333, 0 .5em 0 0 #333;
+    }
+
+    #close {
+        position: relative;
+        left: .8em;
+        height: 1.75em;
+        width: .25em;
+        transform: rotate(45deg);
+        /* margin-top: 3em; */
+        background: #333;
+    }
+
+    #close:before {
+        position: absolute;
+        left: -.75em;
+        top: .75em;
+        width: 1.75em;
+        height: .25em;
+        background: #333;
+        content: "";
+    }
+
+    .hidden {
+        display: none; 
+    }
+
+    .show {
+        display: block; 
+    }
+    /* ende Hamburger-Menu _________________________________________________ */
     
+
+    /* Anfang Header umbauen +++++++++++++++++++++++++++++++++++++++++++++++ */
+    .wrapper {
+        float: none; 
+        padding-top: 2em;
+    }
+
+    .head {
+        position: static;
+        width: 80%; 
+        margin: auto;
+    }
+
+    .head h1 {
+        float: right;
+    }
+
+    nav {
+        left: -9999em;
+    }
+    
+    .register-login {
+        left: -9999em;
+    }
+
+    .register-login li {
+        padding: 0;
+    }
+
+    .user-name {
+        display: none;
+    }
+    /* ende Header umbauen _________________________________________________ */
 }
+/* ende max-width: 1200px __________________________________________________ */
+
+
+/* Anfang max-width: 800px +++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .nav-container {
+        position: absolute;
+        top: 2em;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 0;
+        left: 1em;
+    }
+}
+/* ende max-width: 800px __________________________________________________ */
+

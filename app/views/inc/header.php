@@ -16,15 +16,7 @@
 </head>
 <body class="clear">
     
-    <header class="head">
-        <h1><?php echo $data['head']; ?></h1>
-        <?php if (!isset($data['home'])) : ?>
-            <h2><a href="<?= URLROOT ?>">Michel Holzky</a></h2>
-        <?php endif ?>
-    </header>
 
-
-    <?php require 'navbar.php'; ?>
 
 
     <!-- Der Wrapper soll auf der Startseite anders gestaltet werden -->
@@ -36,3 +28,16 @@
         echo '<div class="wrapper">';
     }
     ?>
+
+
+    <header class="head clear">
+        <h1><?php echo $data['head']; ?></h1>
+        <?php if (!isset($data['home'])) : ?>
+            <h2><a href="<?= URLROOT ?>">Michel Holzky</a></h2>
+        <?php endif ?>
+    </header>
+
+
+    <!-- Navigation +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <?php require 'navbar.php'; ?>
+    <!-- ende Navigation __________________________________________________ -->
