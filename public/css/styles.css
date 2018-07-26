@@ -9,8 +9,8 @@ html {
 
 body {
     min-height: 100%;
-    min-width: 400px;
-    /* height: 100%; */
+    height: 100%;
+    min-width: 320px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5em;
     letter-spacing: .04em;
@@ -47,13 +47,13 @@ ul li {
     z-index: 10;
     width: 60%;
     max-width: 1200px;
-    /* min-width: 800px; */
     min-height: 100vh;
-    height: 100%;
+    /* height: 100%; */
     margin: 0 auto;
-    padding: 5em 0;
-    /* background-color: #333; */
+    /* padding: 5em 0; */
     background-color: rgba(238, 238, 238, 0.95);
+    border-top: 1px solid rgba(238, 238, 238, 0.95);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.95);
 }
 
 .wrapper.index {
@@ -63,7 +63,7 @@ ul li {
 
 .inner-wrap {
     width: 80%;
-    margin: 0 auto;
+    margin: 4em auto 10em;
 }
 
 .back-button {
@@ -85,11 +85,9 @@ ul li {
     padding-top: .35em;
     letter-spacing: .04em;
 }
-
 /* ende main ---------------------------------------------------------*/
 
 /* ANFANG HEAD ++++++++++++++++++++++++++++++++++++++++++++++++ */
-
 .head {
     position: fixed;
     left: 2.5%;
@@ -97,6 +95,7 @@ ul li {
     z-index: 11;
     color: #fff;
 }
+
 
 .head h1 {
     font-size: 1.6em;
@@ -107,23 +106,16 @@ ul li {
     font-size: 1.1em;
 }
 
-.head h2 a {
+.head a {
     color: #fff;
 }
-
-.head sup {
-    font-size: .6em;
-    /* font-weight: 400 */
-}
-
 /* ende head --------------------------------------------------- */
 
-/* ANFANG NAV ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* ANFANG NAV ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .nav-container {
     position: relative;
 }
-
 
 nav {
     position: fixed;
@@ -149,7 +141,6 @@ nav {
 /* ende Hamburger-Menu ------------ */
 
 /*  login-buttons */
-
 .register-login {
     position: fixed;
     right: 2.5%;
@@ -183,11 +174,50 @@ nav {
     font-weight: 900;
     /* color: #333; */
 }
+/* ende nav ---------------------------------------------------------------- */
 
-/* ende nav -------------------------------------------------------- */
 
-/* ANFANG Form +++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Anfang footer +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.footer {
+    position: absolute;
+    bottom: 2em;
+    left: 10%;
+    width: 80%;
+    padding-top: 1em;
+}
 
+.ext-logo {
+    color: #333;
+    fill: currentColor;
+    height: 1em;
+    width: auto;
+}
+
+.index .ext-logo {
+    color: #fff;
+    fill: currentColor;
+}
+
+
+.author {
+    text-transform: uppercase;
+    font-size: .75em;
+    letter-spacing: .09em;
+}
+
+.ext-logo:hover {
+    color: rgb(66, 186, 241);
+    fill: currentColor;
+}
+
+.footer li {
+    float: left;
+    margin: .5em 2em 0 0;
+}
+/* ende footer ------------------------------------------------------------- */
+
+
+/* ANFANG Form +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .invalid {
     box-shadow: 0 0 3px #CC0000;
 }
@@ -199,7 +229,6 @@ legend {
 }
 
 /* .edit-wrap label { */
-
 label {
     font-size: .75em;
     text-transform: uppercase;
@@ -250,7 +279,6 @@ textarea {
 }
 
 /* Button: Beitrag hinzufügen */
-
 .content.button {
     /* display: table; */
     margin: 5em 0 1em;
@@ -292,13 +320,10 @@ textarea {
 .href-button a {
     color: rgb(66, 186, 241);
 }
-
 /* ende Seite mit einzelnem Beitrag */
-
 /* ende Form --------------------------------------------------- */
 
 /* ANFANG INDEX ++++++++++++++++++++++++++++++++++++++++++++++++ */
-
 .skills {
     display: block;
     margin-left: 1.5em;
@@ -316,19 +341,16 @@ textarea {
     color: rgb(235, 196, 113);
     font-style: normal;
 }
-
 /* ende index --------------------------------------------------- */
 
+
 /* ANFANG PORTFOLIO ++++++++++++++++++++++++++++++++++++++++++++++++ */
-
 /* bilder passen sich der weite des Elternelements an */
-
 .auto-width {
     width: 100%;
 }
 
 /* macht den gesamten Beitrag klickbar */
-
 .expand-link {
     position: absolute;
     top: 0;
@@ -338,14 +360,12 @@ textarea {
 }
 
 /* enthält den gesamten Beitrag */
-
 .content {
     position: relative;
     margin-bottom: 3em;
 }
 
 /* umschließt das Bild */
-
 .crop-img {
     height: 10em;
     position: relative;
@@ -355,7 +375,6 @@ textarea {
 }
 
 /* umschließt den Text, der das Bild beschreibt */
-
 .img-text {
     position: absolute;
     bottom: 0em;
@@ -375,23 +394,17 @@ textarea {
 }
 
 /* Beschreibungstext */
-
 .description {
     height: 0;
     overflow: hidden;
 }
-
 /* ende portfolio --------------------------------------------------- */
 
-/* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .space-left {
     margin-left: 10%;
 }
-
-/* ende portfolio --------------------------------------------------- */
-
-/* ANFANG BLOG +++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .user-data {
     font-size: .75em;
@@ -421,11 +434,10 @@ textarea {
 .show-more a:hover:after {
     content: " >";
 }
-
 /* ende blog --------------------------------------------------------------- */
 
-/* IMPRESSUM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* IMPRESSUM +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .impressum h4 {
     margin-top: 2em;
 }
@@ -433,9 +445,7 @@ textarea {
 .impressum h3 {
     margin-top: 2em;
 }
-
 /* ende impressum ---------------------------------------------------------- */
-
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -444,13 +454,19 @@ textarea {
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Anfang max-width: 1400px ++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 1400px) {
     .register-login li {
         float: none;
         text-align: right;
     }
 }
+/* ende max-width: 1400px __________________________________________________ */
+/* ------------------------------------------------------------------------- */
 
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Anfang max-width: 1200px ++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 1200px) {
     .register-login {
@@ -465,13 +481,13 @@ textarea {
     .wrapper {
         float: right;
         width: 75%;
-        /* margin: 0 0 0 auto; */
-        /* min-width: auto; */
     }
 } 
 /* ende max-width: 1200px __________________________________________________ */
+/* ------------------------------------------------------------------------- */
 
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Anfang max-width: 900px +++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 900px) {
     /* Hamburger-Menu ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -479,7 +495,7 @@ textarea {
         position: fixed;
         left: 2.5%;
         top: 2rem;
-        z-index: 15;
+        z-index: 150;
     }
 
     .hamburger a {
@@ -493,7 +509,7 @@ textarea {
     }
 
     #open:before {
-        content: " ";
+        content: "";
         position: absolute;
         left: 0;
         top: .5em;
@@ -510,18 +526,19 @@ textarea {
         height: 1.75em;
         width: .25em;
         transform: rotate(45deg);
-        /* margin-top: 3em; */
+        border-radius: .1em;
         background: #333;
     }
 
     #close:before {
+        content: "";
         position: absolute;
         left: -.75em;
         top: .75em;
         width: 1.75em;
         height: .25em;
+        border-radius: .1em;
         background: #333;
-        content: "";
     }
 
     .hidden {
@@ -532,30 +549,75 @@ textarea {
         display: block; 
     }
     /* ende Hamburger-Menu _________________________________________________ */
-    
 
-    /* Anfang Header umbauen +++++++++++++++++++++++++++++++++++++++++++++++ */
-    .wrapper {
-        float: none; 
-        padding-top: 2em;
-    }
-
-    .head {
-        position: static;
-        width: 80%; 
-        margin: auto;
-    }
-
-    .head h1 {
-        float: right;
+    /* Anfang Navigation umbauen +++++++++++++++++++++++++++++++++++++++++++ */
+    .nav-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -9999em;
+        z-index: 100;
+        width: calc(100% - .4em);
+        border-left: .4em solid #333;
+        border-right: .4em solid #333;
+        background: #ddd;
+        padding-top: 5em;
     }
 
     nav {
-        left: -9999em;
+        position: static;
+        margin: auto;
+        transform: none;
     }
-    
+
+    .nav-ul li {
+        text-align: center;
+    }
+
+    .nav-ul a {
+        color: #333;
+        font-size: 1.5em;
+    }
+
+    .active a:before {
+        content: '\2013  ';
+        position: static;
+        margin-top: -0.05em;
+        font-size: 1.1em;
+        font-weight: 900;
+        color: rgb(66, 186, 241);
+    }
+
+    .active a:after {
+        content: '  \2013';
+        position: static;
+        margin-top: -0.05em;
+        font-size: 1.1em;
+        font-weight: 900;
+        color: rgb(66, 186, 241);
+    }
+
+    /* Login/Logout unter Navigation einordnen */
     .register-login {
-        left: -9999em;
+        position: static;
+    }
+
+    .register-login li {
+        text-align: center;
+    }
+
+    .register-login a {
+        font-size: 1.5em;
+        line-height: 2em;
+        color: #892424;
+    }
+
+    .register-login a:hover {
+        border: none;
+    }
+
+    .register-login a:hover:after {
+        content: ' >';
     }
 
     .register-login li {
@@ -565,11 +627,41 @@ textarea {
     .user-name {
         display: none;
     }
-    /* ende Header umbauen _________________________________________________ */
+    /* ende Navigations umbauen ____________________________________________ */
+
+
+    /* Anfang Layout umbauen +++++++++++++++++++++++++++++++++++++++++++++++ */
+    .wrapper {
+        float: none; 
+    }
+    
+    .head {
+        position: static;
+        width: 80%; 
+        margin: 0 auto 2em;
+        padding-top: 2em;
+        color: #333;
+    }
+
+    .head h1 {
+        float: right;
+    }
+    
+    .index .head h1 {
+        color: #fff;
+    }
+
+    .head a {
+        color: #333;
+    }
+
+    /* ende Layout umbauen _________________________________________________ */
 }
-/* ende max-width: 1200px __________________________________________________ */
+/* ende max-width: 900px ___________________________________________________ */
+/* ------------------------------------------------------------------------- */
 
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* Anfang max-width: 800px +++++++++++++++++++++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 800px) {
     .wrapper {
@@ -578,14 +670,41 @@ textarea {
 
     .nav-container {
         position: absolute;
-        top: 2em;
     }
 
     .hamburger {
         position: absolute;
-        top: 0;
+        top: 2em;
         left: 1em;
     }
+
+    /* auf der Startseite soll der Burger hell sein, da der Higru dunkel ist */
+    .index #open:before {
+        background-color: #fff;
+        box-shadow: 0 -0.5em 0 0 #fff, 0 0.5em 0 0 #fff;
+    }
+
+    .index #close, .index #close:before {
+        /* background-color: #fff; */
+    }
+
 }
 /* ende max-width: 800px __________________________________________________ */
+/* ------------------------------------------------------------------------- */
 
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Anfang max-width: 600px +++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+        padding-top: 4em;
+    }
+
+    .hamburger {
+        position: absolute;
+        left: 10%;
+    }
+}
+/* ende max-width: 600px __________________________________________________ */
+/* ------------------------------------------------------------------------- */

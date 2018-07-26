@@ -1,7 +1,5 @@
 <?php require APPROOT . '/views/inc/header.php'; ?>
 
-<?php require APPROOT . '/views/inc/navbar.php'; ?>
-
 <div class="inner-wrap" id="inner-wrap">
     <form action="<?php echo URLROOT ?>/user/register" method="POST">
         <fieldset>

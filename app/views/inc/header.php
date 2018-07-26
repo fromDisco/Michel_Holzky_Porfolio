@@ -17,8 +17,6 @@
 <body class="clear">
     
 
-
-
     <!-- Der Wrapper soll auf der Startseite anders gestaltet werden -->
     <?php
     if (trim($_SERVER['REQUEST_URI'], "/") == 'Michel_Holzky_Portfolio-WIP') {

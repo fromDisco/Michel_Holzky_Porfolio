@@ -3,6 +3,7 @@
     "use strict";
 
     window.addEventListener('load', function () {
+        // die url herrausfinden
         var url = window.location.href.split("/");
         var location = url[url.length - 1];
 
@@ -22,28 +23,21 @@
             var dateContainer = document.getElementById('date');
             dateContainer.textContent = date();
         } // ende Uhr ---------------------------------------------------------
+        // --------------------------------------------------------------------
 
-        // Portfolio ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // Portfolio-Animation ++++++++++++++++++++++++++++++++++++++++++++++++
         if (location == 'portfolio') {
             var portfolio = document.getElementById('inner-wrap');
             portfolio.addEventListener('mouseover', expand);
             portfolio.addEventListener('mouseout', shrink);
         }
         // ende Portfolio -----------------------------------------------------
-
-        // var intGrow = setInterval(function grow() {
-        //     if (i >= imgHeight) {
-        //         clearInterval(intGrow);
-        //         imgContainer.style.height = imgHeight;
-        //         description.style.height = 'auto';
-    
-        //     } else {
-        //         imgContainer.style.height = i + 'px';
-        //         i += 6;
-        //     }
-        // }, 1);
+        // --------------------------------------------------------------------
 
 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         // Img-Slider auf Seite About +++++++++++++++++++++++++++++++++++++++++
         if (location == 'about') {
             var slide = setInterval(function change() {
@@ -60,7 +54,6 @@
 
             // ändert die Attribute anhand der in randomPic ermittelten Arrays: Array[zufall]
             var pic = document.getElementById("bg");
-
             function changePic(resp) {
                 var zufall = randomPic(resp);
                 var quelle = "../img/portfolio/" + resp[zufall];
@@ -74,8 +67,19 @@
             }
         } // if (location == 'about')
         // ende Img-Slider ----------------------------------------------------
+        // --------------------------------------------------------------------
+
+
+        // Hamburger-Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        var hamburger = document.getElementsByClassName('hamburger')[0];
+        hamburger.addEventListener('click', showHideNavi);
+        // ende Hamburger-Menu ------------------------------------------------
+        // --------------------------------------------------------------------
+
     });
     // ende window.addEventListener -------------------------------------------
+    // ------------------------------------------------------------------------
 
 }(window, document));
 // ende Window-object +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -134,54 +138,89 @@ function digits(str, count, sign) {
 // Portfolio expand +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function expand(e) {
     // aktuelle Containergröße und tatsächliche Bildgröße auslesen
-    var imgContainer = e.target.parentElement.firstElementChild;
-    var img = e.target.parentElement.firstElementChild.firstElementChild;
-    imgContainerHeight = imgContainer.offsetHeight;
-    imgHeight = img.offsetHeight;
-    var i = imgContainerHeight;
+    if (e.target.nodeName === 'A') {
+        var imgContainer = e.target.parentElement.firstElementChild;
+        var img = e.target.parentElement.firstElementChild.firstElementChild;
+        imgContainerHeight = imgContainer.offsetHeight;
+        imgHeight = img.offsetHeight;
+        var i = imgContainerHeight;
 
-    // Textfeldgröße ändern
-    var description = e.target.previousElementSibling;
+        // Textfeldgröße ändern
+        var description = e.target.previousElementSibling;
 
-    // // zu Bookmark-Link springen
-    // var link = e.target.getAttribute('id');
-    // window.location = '#' + link;
+        // // zu Bookmark-Link springen
+        // var link = e.target.getAttribute('id');
+        // window.location = '#' + link;
 
-    // Containergröße an Bildgröße anpassen
-    var intGrow = setInterval(function grow() {
-        if (i >= imgHeight) {
-            clearInterval(intGrow);
-            imgContainer.style.height = imgHeight;
-            description.style.height = 'auto';
+        // Containergröße an Bildgröße anpassen
+        var intGrow = setInterval(function grow() {
+            if (i >= imgHeight) {
+                clearInterval(intGrow);
+                imgContainer.style.height = imgHeight;
+                description.style.height = 'auto';
 
-        } else {
-            imgContainer.style.height = i + 'px';
-            i += 6;
-        }
-    }, 1);
+            } else {
+                imgContainer.style.height = i + 'px';
+                i += 6;
+            }
+        }, 1);
+    }
 }
 // ende Porfolio expand -------------------------------------------------------
 
 // Portfolio shrink +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function shrink(e) {
-    var imgContainer = e.target.parentElement.firstElementChild;
-    imgContainerHeight = imgContainer.offsetHeight;
-    var i = imgContainerHeight;
 
-    // Textfeldgröße ändern
-    var description = e.target.previousElementSibling;
+    if (e.target.nodeName === 'A') {
+        var imgContainer = e.target.parentElement.firstElementChild;
+        imgContainerHeight = imgContainer.offsetHeight;
+        var i = imgContainerHeight;
 
-    // Containergröße an Bildgröße anpassen
-    var intDecrease = setInterval(function decrease() {
-        if (i <= 160) {
-            clearInterval(intDecrease);
-            imgContainer.style.height = '160px';
-            description.style.height = '0';
+        // Textfeldgröße ändern
+        var description = e.target.previousElementSibling;
 
-        } else {
-            imgContainer.style.height = i + 'px';
-            i -= 8;
-        }
-    }, 1);
+        // Containergröße an Bildgröße anpassen
+        var intDecrease = setInterval(function decrease() {
+            if (i <= 160) {
+                clearInterval(intDecrease);
+                imgContainer.style.height = '160px';
+                description.style.height = '0';
+
+            } else {
+                imgContainer.style.height = i + 'px';
+                i -= 8;
+            }
+        }, 1);
+    }
 }
 // ende Porfolio shrink -------------------------------------------------------
+
+
+// Navigation zeigen und verbergen ++++++++++++++++++++++++++++++++++++++++++++
+function showHideNavi(e) {
+    e.preventDefault();
+
+    var navigation = document.getElementsByClassName('nav-container')[0];
+    e.target.classList.toggle('show');
+    e.target.classList.toggle('hidden');
+
+    // Wenn das angeklickte Element das letzte in der Liste ist, 
+    // muss nach dem vorherigen Element gesucht werden
+    if (e.target.nextElementSibling != null) {
+        e.target.nextElementSibling.classList.toggle('show');
+        e.target.nextElementSibling.classList.toggle('hidden');
+    } else {
+        e.target.previousElementSibling.classList.toggle('show');
+        e.target.previousElementSibling.classList.toggle('hidden');
+    }
+
+    
+    if (e.target.getAttribute('id') == 'open') {
+        navigation.style.left = 0;
+    }
+    if (e.target.getAttribute('id') == 'close') {
+        navigation.style.left = '9999em';
+    }
+
+}
+// ende Navigation zeigen und verbergen ---------------------------------------
